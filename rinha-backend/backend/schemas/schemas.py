@@ -1,6 +1,5 @@
 from pydantic import BaseModel, Field
 
-
 class UserSchema(BaseModel):
     id: int = Field(default=None, gt=0)
     name: str = Field(max_length=100)
@@ -25,3 +24,10 @@ class TransactionSchema(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class TransactionCreate(BaseModel):
+    amount: float
+    timestamp: str
+    status: str = "pending"
+    user: int  

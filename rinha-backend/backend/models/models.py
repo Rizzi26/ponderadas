@@ -22,3 +22,4 @@ class Transaction(Model):
     status = String(max_length=20, default="pending")
 
     user: Optional[User] = ForeignKey(User)
+
