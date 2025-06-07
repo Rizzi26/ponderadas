@@ -1,1 +1,4 @@
 rinha-backend/venv/
+rinha-backend/.env
+
+**/__pycache__/
